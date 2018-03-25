@@ -180,8 +180,8 @@ Easy, isn't it? Try it now. I'm awaiting your orders.
                 update.effective_user.username or 'N/A', sender_id)
 
             # Reply
-            update.message.reply_text(
-                'As you wish, Master! I will leave this group immediately!')
+            update.message.reply_text('As you wish, Master! I will stop '
+                                      'watching this group immediately!')
 
     def _report_here_cmd(self, bot, update):
         """ Handle /report_here command.

@@ -145,7 +145,7 @@ class InMemoryStore(AbstractStore):
 
         if chat_id in InMemoryStore._CHATS:
             # Add the Master to the list of subscribers
-            InMemoryStore._CHATS[chat_id] += {master_settings}
+            InMemoryStore._CHATS[chat_id] |= {master_settings}
         else:
             # Create a new list of subscribers for this chat
             InMemoryStore._CHATS[chat_id] = {master_settings}
